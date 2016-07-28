@@ -1,3 +1,16 @@
+**setup git workspace on windows/mac
+1. Have tab completion in git bash also better prompt showing last commit info and which also indicate * if needs to commit
+->Open git bash and have  ~/git-completion.bash,  ~/git-prompt.sh and ~/.bash_profile from git_workspace folder
+->restart gitbash in windows/bash
+2. Can also launch test editor from git bash - e.g. application filename , subl filename .
+->Make alias=application_location and store in .bash_profile
+->restart gitbash/bash
+->git config --global core.editor "<location_of_editor> -n -w"  #n means sublime opens in new window, git will wait for sublime to close before continue
+3. Some more useful configurations
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+->restart gitbash/bash
+
 git init		#make current working dir a git repo
 git init <dir_name>	#make specified dir a git repo
 
@@ -8,20 +21,40 @@ git commit -m "message"	#move everything from staging to local git repo(a store 
 
 git commit -am "message" #move all trackable files from working dir to repo (skip staging)
 
-git log			#show all commit
 git status		#show working dir, staging and repo  / Also show if it is not a git repo
-git diff		#difference between working dir and repo
+
+**operations on commits
+git log			#show all commit 
+git log --stat		#which files were changed between commits
+git log --author="commited by name"	#show commits by a particular user
+git log | grep -b5 -a5 "text_to_search"	#get 5 lines before and after a particular commit/text
+git diff		#difference between working dir and repo at line level
 git diff --staged	#difference between staging and repo
+git diff <old_commit_ref1> <new_commit_ref2> #difference between two commits
 
 git rm <file_name>
 git mv <old_name> <new_name>
 
-git checkout -- <file_name>	#retrieve last copy of file from repo
+git checkout <comit_ref_no>	#moving Head to particular commit #detached head state #this commit appear as most recent-see git log
+#checkout a particular commit...note down the most recent commit number first needs to revert back the head
+
+git checkout -- <file_name>	#retrieve last copy of file from repo 
 git checkout <commit_ref> -- <file_name>	#retrieve a specified point in time copy of file from repo
 
 git reset HEAD <filename>	#unstage  a file
 
-git remote add <nick_name_for_remote> <remote_URL>	#must be in git repo/git repo child to execute
-git push -u <nick_name_for_remote> master
+git remote add <nick_name_for_remote> <remote_URL>	#must be in git repo/git repo child to execute # build a connection to remote repo
+git push -u <nick_name_for_remote> master	#push everything in local repo to remote repo
+
+git clone <remote_URL> #copy/clone remote repo
 
 .gitignore
+
+git config --global color.ui auto	#get colored diffs
+git config --global user.name "<username>"
+git config --global user.email "<useremail>"
+git config --list	#show all git settings
+git config user.name #show a particular git setting e.g. user.name
+
+git help #get git help
+git help commit #get more help in particular command shown in help e.g. commit 
