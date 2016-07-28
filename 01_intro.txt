@@ -1,27 +1,27 @@
-git init
-git init <dir_name>
+git init		#make current working dir a git repo
+git init <dir_name>	#make specified dir a git repo
 
-git add .
-git add <file_name>
+git add .		#add everything to staging / git will track every file so far in working directory
+git add <file_name>	#add file to staging / git will track this file 
 
-git commit -m "message"
+git commit -m "message"	#move everything from staging to local git repo(a store that keeps snapshos/versions)
 
-git commit -am "message"
+git commit -am "message" #move all trackable files from working dir to repo (skip staging)
 
-git log
-git status
-git diff
-git diff --staged
+git log			#show all commit
+git status		#show working dir, staging and repo  / Also show if it is not a git repo
+git diff		#difference between working dir and repo
+git diff --staged	#difference between staging and repo
 
 git rm <file_name>
 git mv <old_name> <new_name>
 
-git checkout -- <file_name>
-git checkout <commit_ref> -- <file_name>
+git checkout -- <file_name>	#retrieve last copy of file from repo
+git checkout <commit_ref> -- <file_name>	#retrieve a specified point in time copy of file from repo
 
-git reset HEAD <filename>
+git reset HEAD <filename>	#unstage  a file
 
-git remote add <nick_name_for_remote> <remote_URL>
+git remote add <nick_name_for_remote> <remote_URL>	#must be in git repo/git repo child to execute
 git push -u <nick_name_for_remote> master
 
-:.gitignore
+.gitignore
