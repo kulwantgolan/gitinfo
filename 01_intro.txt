@@ -1,0 +1,27 @@
+git init
+git init <dir_name>
+
+git add .
+git add <file_name>
+
+git commit -m "message"
+
+git commit -am "message"
+
+git log
+git status
+git diff
+git diff --staged
+
+git rm <file_name>
+git mv <old_name> <new_name>
+
+git checkout -- <file_name>
+git checkout <commit_ref> -- <file_name>
+
+git reset HEAD <filename>
+
+git remote add <nick_name_for_remote> <remote_URL>
+git push -u <nick_name_for_remote> master
+
+:.gitignore
