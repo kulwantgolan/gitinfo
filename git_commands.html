@@ -1,4 +1,34 @@
-**setup git workspace on windows/mac
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" media="screen" href="tidy/screen.css">
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->  
+<script type="text/javascript" src="tidy/jquery.js"></script>
+<script type="text/javascript" src="tidy/jquery.hotkeys.js"></script>
+<script type="text/javascript" src="tidy/UI.js"></script>
+</head>
+<body>
+
+<div id="main_content"> 
+    
+    <h2>Heading <em>01</em></h2>
+    <p>Description &#8220;in quote&#8221;</p>
+    <h4>Execute:</h4>
+    <div class="instructions"><pre>mkdir hello</pre><pre>cd hello</pre></div>
+    <h4>File: <em>hello.rb</em></h4>
+    <pre class="file">puts "Hello, World"</pre>
+    <h4>Output:</h4>
+    <pre class="sample">$ git init
+    warning: templates not found /Users/tonywok/.git_template
+    Initialized empty Git repository in /Users/tonywok/src/git_immersion/auto/hello/.git/
+    </pre>
+
+
+
+*setup git workspace on windows/mac
 1. Have tab completion in git bash also better prompt showing last commit info and which also indicate * if needs to commit
 ->Open git bash and have  ~/git-completion.bash,  ~/git-prompt.sh and ~/.bash_profile from git_workspace folder
 ->restart gitbash in windows/bash
@@ -67,3 +97,19 @@ git commit -m ""
 git add
 git status
 git commit -m ""
+    <h2>Submodules <em>1000</em></h2>
+    <p>Nested repo, execute command from the top of repo</p>
+    <h4>Execute:</h4>
+    <div class="instructions"><pre>git submodule add URL location</pre></div>
+    <h4>Output:</h4>
+    <pre class="sample">$ git submodule add https://github.com/chaconinc/DbConnector lib/DbConnector
+    Cloning into 'lib/DbConnector'...
+    remote: Counting objects: 11, done.
+    remote: Compressing objects: 100% (10/10), done.
+    remote: Total 11 (delta 0), reused 11 (delta 0)
+    Unpacking objects: 100% (11/11), done.
+    Checking connectivity... done.
+    </pre>
+</div>
+</body>
+</html>
