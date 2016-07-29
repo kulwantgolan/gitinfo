@@ -42,6 +42,7 @@ git checkout -- <file_name>	#retrieve last copy of file from repo
 git checkout <commit_ref> -- <file_name>	#retrieve a specified point in time copy of file from repo
 
 git reset HEAD <filename>	#unstage  a file
+git reset --hard	#discard any changes in working direcory and staging area , you cannot get discarded changes back  -> run git diff and git diff --staged to know what is working dir and staging area before discarding
 
 git remote add <nick_name_for_remote> <remote_URL>	#must be in git repo/git repo child to execute # build a connection to remote repo
 git push -u <nick_name_for_remote> master	#push everything in local repo to remote repo
