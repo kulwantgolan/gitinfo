@@ -46,7 +46,7 @@ git reset HEAD <filename>	#unstage  a file
 git remote add <nick_name_for_remote> <remote_URL>	#must be in git repo/git repo child to execute # build a connection to remote repo
 git push -u <nick_name_for_remote> master	#push everything in local repo to remote repo
 
-git clone <remote_URL> #copy/clone remote repo
+git clone <remote_URL> #clone remote repo i.e. the the histroy/commits info as well
 
 .gitignore
 
