@@ -5,7 +5,7 @@
 2. Can also launch test editor from git bash - e.g. application filename , subl filename .
 ->Make alias=application_location and store in .bash_profile
 ->restart gitbash/bash
-->git config --global core.editor "<location_of_editor> -n -w"  #n means sublime opens in new window, git will wait for sublime to close before continue
+->git config --global core.editor "<location_of_editor>/<alias> -n -w"  #n means sublime opens in new window, git will wait for sublime to close before continue
 3. Some more useful configurations
 git config --global push.default upstream
 git config --global merge.conflictstyle diff3
@@ -35,7 +35,7 @@ git diff <old_commit_ref1> <new_commit_ref2> #difference between two commits
 git rm <file_name>
 git mv <old_name> <new_name>
 
-git checkout <comit_ref_no>	#moving Head to particular commit #detached head state #this commit appear as most recent-see git log
+git checkout <comit_ref_no>	#moving Head to particular commit #detached head state #this commit appear as most recent-see git log #head is gits name for current commit
 #checkout a particular commit...note down the most recent commit number first needs to revert back the head
 
 git checkout -- <file_name>	#retrieve last copy of file from repo 
@@ -58,3 +58,11 @@ git config user.name #show a particular git setting e.g. user.name
 
 git help #get git help
 git help commit #get more help in particular command shown in help e.g. commit 
+
+Normal flow
+===========
+git commit -m ""
+
+git add
+git status
+git commit -m ""
