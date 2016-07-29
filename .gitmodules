@@ -1,0 +1,6 @@
+[submodule "games/pappu-pakia"]
+	path = games/pappu-pakia
+	url = https://github.com/udacity/pappu-pakia
+[submodule "games/asteriods"]
+	path = games/asteriods
+	url = https://github.com/udacity/asteroids
