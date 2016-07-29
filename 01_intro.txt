@@ -14,8 +14,8 @@ git config --global merge.conflictstyle diff3
 git init		#make current working dir a git repo
 git init <dir_name>	#make specified dir a git repo
 
-git add .		#add everything to staging / git will track every file so far in working directory
-git add <file_name>	#add file to staging / git will track this file 
+git add .		#add everything to staging 
+git add <file_name>	#add file to staging  
 
 git commit -m "message"	#move everything from staging to local git repo(a store that keeps snapshos/versions)
 
@@ -28,8 +28,8 @@ git log			#show all commit
 git log --stat		#which files were changed between commits
 git log --author="commited by name"	#show commits by a particular user
 git log | grep -b5 -a5 "text_to_search"	#get 5 lines before and after a particular commit/text
-git diff		#difference between working dir and repo at line level
-git diff --staged	#difference between staging and repo
+git diff		#difference between working dir and staging area epo at line level
+git diff --staged	#difference between staging and repo #run it before commit to see what is about to be commited
 git diff <old_commit_ref1> <new_commit_ref2> #difference between two commits
 
 git rm <file_name>
