@@ -110,6 +110,15 @@ git commit -m ""
     Unpacking objects: 100% (11/11), done.
     Checking connectivity... done.
     </pre>
+
+
+
+#store git password in keychain
+git config credential.helper store
+now, next time u enter password it will be stored in keychain for automatic use.
+
+git config --global credential.helper 'cache --timeout 7200' #store it for 2 hours
+
 </div>
 </body>
 </html>
